@@ -9,6 +9,8 @@ const mainIngredients = [
   "a forgotten dream",
   "sparkle dust",
   "a rogue potato",
+  "the echoes of a forgotten laugh",
+  "a whisper of autumn leaves",
 ];
 
 const preparationMethods = [
@@ -22,6 +24,8 @@ const preparationMethods = [
   "smoked over ancient mysteries",
   "infused with existential dread",
   "baked in a quantum oven",
+  "blended with the tears of a cosmic clown",
+  "pan-fried in a puddle of starlight",
 ];
 
 const servingSuggestions = [
@@ -35,6 +39,8 @@ const servingSuggestions = [
   "on a bed of unfulfilled prophecies",
   "drizzled with the essence of 'maybe'",
   "with a side of awkward silence",
+  "served in a teacup of forgotten promises",
+  "garnished with a single, knowing wink",
 ];
 
 const cookingTimes = [
@@ -48,6 +54,8 @@ const cookingTimes = [
   "just before dawn, or after dusk",
   "until cosmic alignment",
   "for eternity, or until done",
+  "until the platypus learns to fly",
+  "just long enough for a good existential crisis",
 ];
 
 function getRandomElement(arr) {
@@ -66,4 +74,13 @@ function generateAbsurdRecipe() {
   return recipe;
 }
 
-console.log(generateAbsurdRecipe());
+const recipeOutputDiv = document.getElementById("recipeOutput");
+const generateButton = document.getElementById("generateButton");
+
+generateButton.addEventListener("click", () => {
+  recipeOutputDiv.textContent = generateAbsurdRecipe();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  recipeOutputDiv.textContent = generateAbsurdRecipe();
+});
